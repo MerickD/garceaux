@@ -765,23 +765,21 @@ h3 {
 
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
+    width: auto;
   }
 
   .cta-band .container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     text-align: left;
   }
 
   .cta-band .btn {
-    width: 100%;
-    justify-content: center;
+    width: auto;
   }
 
   .footer-bottom {
