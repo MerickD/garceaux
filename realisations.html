@@ -21,14 +21,24 @@
       property="og:description"
       content="GMK Road Trip et Alfred Society : deux projets web déjà en ligne."
     />
-    <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:image"
+      content="https://garceaux.vercel.app/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://garceaux.vercel.app/images/og-image.jpg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=20261017b" />
+    <link rel="stylesheet" href="css/style.css?v=20261017c" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -72,35 +82,68 @@
 
       <section class="section" style="padding-top: 0">
         <div class="container grid-2">
-          <article class="block reveal">
-            <h3>GMK Road Trip</h3>
-            <p>
-              Site pour une activité de location et road trip automobile :
-              offre claire, fiches véhicules et prise de contact.
-            </p>
+          <article class="block project-card reveal">
             <a
+              class="project-card__media"
               href="https://gmkroadtrip.fr"
-              class="btn btn-dark"
-              style="margin-top: 1.25rem"
               target="_blank"
               rel="noopener noreferrer"
-              >Voir gmkroadtrip.fr</a
             >
+              <img
+                src="images/gmk-roadtrip.jpg"
+                alt="Aperçu du site GMK Road Trip — location de véhicules"
+                width="1292"
+                height="1400"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <h3>GMK Road Trip</h3>
+              <p>
+                Site pour une activité de location et road trip automobile :
+                offre claire, fiches véhicules et prise de contact.
+              </p>
+              <a
+                href="https://gmkroadtrip.fr"
+                class="btn btn-dark"
+                style="margin-top: 1.25rem"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Voir gmkroadtrip.fr</a
+              >
+            </div>
           </article>
-          <article class="block reveal reveal-delay-1">
-            <h3>Alfred Society</h3>
-            <p>
-              Site pour un club lifestyle premium : univers de marque,
-              expériences et parcours d’adhésion.
-            </p>
+
+          <article class="block project-card reveal reveal-delay-1">
             <a
+              class="project-card__media"
               href="https://alfredsociety.fr"
-              class="btn btn-dark"
-              style="margin-top: 1.25rem"
               target="_blank"
               rel="noopener noreferrer"
-              >Voir alfredsociety.fr</a
             >
+              <img
+                src="images/alfred-society.jpg"
+                alt="Aperçu du site Alfred Society — conciergerie haut de gamme"
+                width="1292"
+                height="1400"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-card__body">
+              <h3>Alfred Society</h3>
+              <p>
+                Site pour une conciergerie haut de gamme : univers de marque,
+                expériences et parcours d’adhésion.
+              </p>
+              <a
+                href="https://alfredsociety.fr"
+                class="btn btn-dark"
+                style="margin-top: 1.25rem"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Voir alfredsociety.fr</a
+              >
+            </div>
           </article>
         </div>
       </section>

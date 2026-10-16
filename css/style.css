@@ -498,6 +498,35 @@ h3 {
   font-size: 0.98rem;
 }
 
+/* Cartes réalisations avec capture d’écran */
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--ink-soft);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.55s var(--ease);
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.03);
+}
+
+.project-card__body {
+  padding: var(--space-lg);
+}
+
 .placeholder-note {
   display: inline-block;
   margin-top: var(--space-sm);
