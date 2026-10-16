@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Création de site web &amp; visibilité — Services | Garceaux</title>
+    <meta
+      name="description"
+      content="Création et refonte de sites web, SEO technique et accompagnement pour convertir plus de visiteurs en contacts. Services Garceaux."
+    />
+    <link rel="canonical" href="https://garceaux.fr/services.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Garceaux" />
+    <meta property="og:url" content="https://garceaux.fr/services.html" />
+    <meta
+      property="og:title"
+      content="Création de site web &amp; visibilité — Services | Garceaux"
+    />
+    <meta
+      property="og:description"
+      content="Création, refonte, visibilité et conversion : les services de l’agence Garceaux."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container nav">
+        <a href="index.html" class="logo">Garceaux</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li>
+            <a href="contact.html" class="nav-cta">Parler de votre projet</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="section-label">Services</span>
+          <h1>Ce que Garceaux peut faire pour vous</h1>
+          <p class="lede" style="margin-top: 1rem">
+            Des prestations ciblées pour créer, moderniser ou rendre plus
+            efficace votre présence en ligne — selon votre étape et votre
+            budget.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container grid-2">
+          <article class="block reveal">
+            <h3>Création de site web</h3>
+            <p>
+              Site vitrine ou multi-pages : structure, design, contenus de base
+              et mise en ligne. L’objectif : une présence claire qui présente
+              votre offre et invite au contact.
+            </p>
+          </article>
+          <article class="block reveal reveal-delay-1">
+            <h3>Refonte &amp; modernisation</h3>
+            <p>
+              Votre site existe déjà mais ne reflète plus votre activité, ou
+              convertit mal. Nous le remettons à niveau : clarté, mobile,
+              performance et parcours de contact.
+            </p>
+          </article>
+          <article class="block reveal">
+            <h3>Visibilité &amp; SEO technique</h3>
+            <p>
+              Bases solides pour être trouvé : titres, balises, vitesse,
+              structure des pages et sitemap. De quoi poser des fondations
+              saines avant d’investir davantage en acquisition.
+            </p>
+          </article>
+          <article class="block reveal reveal-delay-1">
+            <h3>Conversion &amp; accompagnement</h3>
+            <p>
+              Messages, appels à l’action et priorisation des actions utiles.
+              Nous vous aidons à décider quoi faire maintenant — et quoi laisser
+              pour plus tard.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <div class="reveal">
+            <h2>Pas sûr de ce qu’il vous faut ?</h2>
+            <p>
+              Décrivez votre situation. Nous clarifions le besoin avant de
+              proposer une solution.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary reveal reveal-delay-1"
+            >Écrire à Garceaux</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand brand">Garceaux</p>
+            <p>
+              Agence digitale. Sites qui attirent, convainquent et
+              convertissent.
+            </p>
+          </div>
+          <div>
+            <h3>Navigation</h3>
+            <a href="services.html">Services</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+            <a href="realisations.html">Réalisations</a>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <a href="mailto:contact@garceaux.fr">contact@garceaux.fr</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year></span> Garceaux</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector("[data-year]").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

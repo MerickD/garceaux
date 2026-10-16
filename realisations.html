@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réalisations — Sites livrés | Garceaux</title>
+    <meta
+      name="description"
+      content="Découvrez les sites livrés par Garceaux : GMK Road Trip et Alfred Society, déjà en ligne."
+    />
+    <link rel="canonical" href="https://garceaux.fr/realisations.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Garceaux" />
+    <meta property="og:url" content="https://garceaux.fr/realisations.html" />
+    <meta
+      property="og:title"
+      content="Réalisations — Sites livrés | Garceaux"
+    />
+    <meta
+      property="og:description"
+      content="GMK Road Trip et Alfred Society : deux projets web déjà en ligne."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container nav">
+        <a href="index.html" class="logo">Garceaux</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="realisations.html" aria-current="page">Réalisations</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-cta">Parler de votre projet</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="section-label">Réalisations</span>
+          <h1>Des projets déjà en ligne</h1>
+          <p class="lede" style="margin-top: 1rem">
+            Deux sites livrés pour des clients réels. Les études de cas
+            détaillées (contexte, choix, résultats) viendront enrichir cette
+            page ensuite.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container grid-2">
+          <article class="block reveal">
+            <h3>GMK Road Trip</h3>
+            <p>
+              Site pour une activité de location et road trip automobile :
+              présentation de l’offre, fiches véhicules et prise de contact.
+            </p>
+            <a
+              href="https://gmkroadtrip.fr"
+              class="btn btn-dark"
+              style="margin-top: 1.25rem"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Voir gmkroadtrip.fr</a
+            >
+          </article>
+          <article class="block reveal reveal-delay-1">
+            <h3>Alfred Society</h3>
+            <p>
+              Site pour un club lifestyle premium : univers de marque,
+              expériences et parcours d’adhésion / contact.
+            </p>
+            <a
+              href="https://alfredsociety.fr"
+              class="btn btn-dark"
+              style="margin-top: 1.25rem"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Voir alfredsociety.fr</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <div class="reveal">
+            <h2>Votre projet pourrait être le suivant</h2>
+            <p>
+              Décrivez votre activité — nous vous indiquons ce qui est réaliste
+              pour une première version.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary reveal reveal-delay-1"
+            >Lancer la discussion</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand brand">Garceaux</p>
+            <p>
+              Agence digitale. Sites qui attirent, convainquent et
+              convertissent.
+            </p>
+          </div>
+          <div>
+            <h3>Navigation</h3>
+            <a href="services.html">Services</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+            <a href="realisations.html">Réalisations</a>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <a href="mailto:contact@garceaux.fr">contact@garceaux.fr</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year></span> Garceaux</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector("[data-year]").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

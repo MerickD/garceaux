@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Page de confirmation formulaire : pas d’intérêt à l’indexer
+Disallow: /merci.html
+
+Sitemap: https://garceaux.fr/sitemap.xml

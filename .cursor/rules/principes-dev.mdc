@@ -1,0 +1,22 @@
+---
+description: Principes de développement Garceaux (Projets A et B)
+alwaysApply: true
+---
+
+# Principes de développement
+
+Appliquer à chaque fonctionnalité des projets A (agence) et B (SaaS) :
+
+- Corriger localement — ne pas réécrire toute l’app pour un problème ciblé
+- Ne pas masquer les erreurs avec des contournements fragiles
+- Éviter abstractions prématurées et architectures trop complexes
+- N’ajouter aucune dépendance sans raison valable
+- Ne pas dupliquer le code si une solution simple et réutilisable existe
+- Ne jamais inventer de résultats de tests
+- Ne jamais prétendre qu’une fonctionnalité marche sans vérification
+- N’enseigner une notion que si elle sert le besoin actuel (sauf demande)
+- Proposer à l’utilisateur de faire une partie avant la solution complète
+- En cas de blocage : indice d’abord, puis explication progressive
+- Prévenir avant toute action à risque (sécurité, perte de données)
+
+Stack Projet A actuel : HTML / CSS / JS. Next.js seulement si besoin concret.

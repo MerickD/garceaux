@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Garceaux — site agence
 
-## Getting Started
+Site vitrine de l’agence digitale **Garceaux**.  
+Stack actuelle : **HTML5 + CSS3 + JavaScript** (sans framework).
 
-First, run the development server:
+## Identité (provisoire)
+
+- **Marque** : Garceaux (wordmark typographique, pas de logo fichier)
+- **Ton** : vouvoiement, clair, pro et humain
+- **Positionnement** : sites qui attirent, convainquent et convertissent — pour indépendants, PME et startups
+- **Email affiché** : contact@garceaux.fr (boîte à créer plus tard)
+- **Formulaire** : Formspree → réception sur deveauxmerick@gmail.com (`js/contact-form.js`)
+- **Domaine SEO** : `https://garceaux.fr` (provisoire — à aligner partout si l’URL finale change)
+
+## Objectif
+
+Présenter les services, rassurer, et convertir des visiteurs en prospects.
+
+## Pages
+
+| Fichier | Rôle |
+|---------|------|
+| `index.html` | Accueil |
+| `services.html` | Services |
+| `a-propos.html` | À propos |
+| `contact.html` | Contact (Formspree) |
+| `merci.html` | Confirmation d’envoi (`noindex`) |
+| `realisations.html` | Portfolio (GMK, Alfred Society) |
+
+## Lancer en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+python3 -m http.server 8000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:8000](http://localhost:8000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## SEO en place
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Titles et meta descriptions uniques
+- Balises Open Graph (partage social)
+- URLs canoniques
+- `sitemap.xml` + `robots.txt`
+- Données structurées JSON-LD (page d’accueil)
+- `merci.html` exclu de l’indexation
 
-## Learn More
+**À faire plus tard** : image Open Graph (`og:image`, ~1200×630), Search Console une fois le site en ligne.
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+agence-digitale/
+├── index.html
+├── services.html
+├── a-propos.html
+├── contact.html
+├── merci.html
+├── realisations.html
+├── css/style.css
+├── js/main.js
+├── js/contact-form.js
+├── robots.txt
+├── sitemap.xml
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Prochaines briques (ordre suggéré)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Hébergement + domaine (+ e-mail `contact@garceaux.fr`)
+2. Image OG / captures réalisations
+3. Affinage design / animations
+4. Next.js seulement si un besoin concret l’exige
