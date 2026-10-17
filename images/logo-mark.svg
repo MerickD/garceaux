@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <!-- Monogramme G+A  trait uniforme, géométrique -->
+  <g stroke="#000" stroke-width="4.5" stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- G circulaire (ouverture à droite + barre verticale) -->
+    <path d="M46.8 18.2A20.5 20.5 0 1 0 49.2 37.5H35.5"/>
+    <path d="M49.2 26.5V42"/>
+    <!-- A inscrit -->
+    <path d="M32 21.5L21.5 48M32 21.5L42.5 48"/>
+    <path d="M25.2 37.5H38.8"/>
+  </g>
+</svg>
