@@ -59,7 +59,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -145,10 +145,10 @@ h3 {
 }
 
 .lede {
-  font-size: clamp(1.02rem, 1.7vw, 1.15rem);
+  font-size: clamp(1.05rem, 1.7vw, 1.18rem);
   font-weight: 400;
   color: var(--muted);
-  max-width: 34rem;
+  max-width: 38rem;
   line-height: 1.75;
   letter-spacing: 0.01em;
 }
@@ -718,12 +718,97 @@ h3 {
 }
 
 .block h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .block p {
   color: var(--muted);
   font-size: 0.98rem;
+}
+
+.block p + p {
+  margin-top: 0.75rem;
+}
+
+/* Texte dense / listes */
+.prose {
+  color: var(--muted);
+  max-width: 38rem;
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.prose-list {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.prose-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.prose-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--accent);
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-md);
+  counter-reset: step;
+}
+
+.step {
+  display: grid;
+  gap: 0.5rem;
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--line);
+}
+
+.step:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.step h3 {
+  font-size: 1.15rem;
+}
+
+.step p {
+  color: var(--muted);
+  max-width: 36rem;
+}
+
+.audience-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Cartes réalisations avec capture d’écran */
