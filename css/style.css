@@ -4,21 +4,22 @@
    ============================================ */
 
 :root {
-  /* Couleurs */
-  --ink: #0e1116;
-  --ink-soft: #1a1f28;
-  --mist: #e8ecf1;
-  --paper: #f4f6f8;
-  --muted: #6b7380;
-  --line: rgba(14, 17, 22, 0.1);
-  --accent: #15c268;
-  --accent-hover: #255a56;
-  --accent-glow: rgba(47, 111, 106, 0.35);
-  --warm: #c4a882;
+  /* Direction A — Atelier clair */
+  --ink: #12151a;
+  --ink-soft: #1c222b;
+  --mist: #e6ebe8;
+  --paper: #f3f5f2;
+  --muted: #5c6570;
+  --line: rgba(18, 21, 26, 0.1);
+  --accent: #2a7a6e;
+  --accent-hover: #1f5f56;
+  --accent-glow: rgba(42, 122, 110, 0.28);
+  --warm: #c2a078;
+  --sand: #e8dcc8;
 
-  /* Typo */
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Outfit", system-ui, sans-serif;
+  /* Typo contemporaine (moins soft / classique) */
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
 
   /* Espacements */
   --space-xs: 0.5rem;
@@ -30,7 +31,7 @@
 
   /* Layout */
   --container: 1120px;
-  --radius: 0.75rem;
+  --radius: 0.875rem;
   --header-h: 4.25rem;
 
   /* Motion */
@@ -102,22 +103,22 @@ button {
 /* ---------- Typographie ---------- */
 .brand {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.04em;
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-size: clamp(2.35rem, 5.5vw, 3.85rem);
 }
 
 h2 {
@@ -177,7 +178,7 @@ h3 {
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(18, 21, 26, 0.05);
 }
 
 .btn-dark {
@@ -203,7 +204,7 @@ h3 {
 }
 
 .site-header.is-scrolled {
-  background: rgba(244, 246, 248, 0.85);
+  background: rgba(243, 245, 242, 0.9);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
 }
@@ -223,11 +224,13 @@ h3 {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-style: italic;
-  font-weight: 500;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.04em;
   position: relative;
   z-index: 110;
+  color: var(--ink);
 }
 
 .nav-links {
@@ -336,36 +339,92 @@ h3 {
   transform: rotate(-45deg);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero — Direction A atelier clair ---------- */
 .hero {
   position: relative;
   min-height: 100svh;
+  min-height: 100dvh;
   display: grid;
   align-items: center;
   padding: calc(var(--header-h) + 2.5rem) 0 3.5rem;
-  color: #fff;
+  color: var(--ink);
   overflow: hidden;
-  background: var(--ink);
+  background: var(--paper);
 }
 
-.hero-bg {
+.hero-visual {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(47, 111, 106, 0.45), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 15% 80%, rgba(196, 168, 130, 0.22), transparent 50%),
-    linear-gradient(160deg, #0e1116 0%, #151b24 45%, #0e1116 100%);
   z-index: 0;
-  animation: glow-shift 14s var(--ease) infinite alternate;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 45% at 88% 18%, rgba(42, 122, 110, 0.22), transparent 60%),
+    radial-gradient(ellipse 40% 35% at 12% 78%, rgba(194, 160, 120, 0.2), transparent 55%),
+    radial-gradient(ellipse 30% 28% at 70% 70%, rgba(232, 220, 200, 0.55), transparent 50%),
+    linear-gradient(165deg, #eef1ed 0%, var(--paper) 45%, #e8eee9 100%);
 }
 
-.hero-bg::after {
+.hero-visual::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-  opacity: 0.4;
-  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(18, 21, 26, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 21, 26, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 40%, #000 20%, transparent 75%);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: orb-drift 16s var(--ease) infinite alternate;
+}
+
+.hero-orb--1 {
+  width: min(42vw, 28rem);
+  height: min(42vw, 28rem);
+  right: -4%;
+  top: 8%;
+  background: radial-gradient(circle at 35% 35%, rgba(42, 122, 110, 0.55), transparent 68%);
+}
+
+.hero-orb--2 {
+  width: min(28vw, 18rem);
+  height: min(28vw, 18rem);
+  left: 6%;
+  bottom: 12%;
+  background: radial-gradient(circle at 40% 40%, rgba(194, 160, 120, 0.45), transparent 70%);
+  animation-delay: -4s;
+}
+
+.hero-orb--3 {
+  width: min(18vw, 11rem);
+  height: min(18vw, 11rem);
+  right: 28%;
+  bottom: 22%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7), transparent 70%);
+  animation-delay: -8s;
+}
+
+.hero-ring {
+  position: absolute;
+  right: 8%;
+  top: 22%;
+  width: min(34vw, 22rem);
+  height: min(34vw, 22rem);
+  border: 1px solid rgba(42, 122, 110, 0.28);
+  border-radius: 40% 60% 55% 45%;
+  animation: ring-spin 28s linear infinite;
+}
+
+.hero-ring::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(194, 160, 120, 0.35);
+  border-radius: 55% 45% 40% 60%;
 }
 
 .hero .container {
@@ -375,25 +434,26 @@ h3 {
 }
 
 .hero-brand {
-  font-size: clamp(2.35rem, 6vw, 3.75rem);
-  margin-bottom: var(--space-sm);
+  font-size: clamp(2.1rem, 5.5vw, 3.25rem);
+  margin-bottom: 0.65rem;
+  color: var(--ink);
   opacity: 0;
-  animation: rise 0.9s var(--ease) 0.1s forwards;
+  animation: rise 0.85s var(--ease) 0.08s forwards;
 }
 
 .hero-title {
-  max-width: 16ch;
+  max-width: 15ch;
   margin-bottom: var(--space-md);
   opacity: 0;
-  animation: rise 0.9s var(--ease) 0.25s forwards;
+  animation: rise 0.85s var(--ease) 0.2s forwards;
 }
 
 .hero-text {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   max-width: 32rem;
   margin-bottom: var(--space-lg);
   opacity: 0;
-  animation: rise 0.9s var(--ease) 0.4s forwards;
+  animation: rise 0.85s var(--ease) 0.34s forwards;
 }
 
 .hero-actions {
@@ -401,13 +461,18 @@ h3 {
   flex-wrap: wrap;
   gap: 0.85rem;
   opacity: 0;
-  animation: rise 0.9s var(--ease) 0.55s forwards;
+  animation: rise 0.85s var(--ease) 0.48s forwards;
+}
+
+.hero .btn-ghost {
+  border-color: rgba(18, 21, 26, 0.22);
+  color: var(--ink);
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -415,12 +480,21 @@ h3 {
   }
 }
 
-@keyframes glow-shift {
+@keyframes orb-drift {
   from {
-    filter: hue-rotate(0deg) saturate(1);
+    transform: translate(0, 0);
   }
   to {
-    filter: hue-rotate(8deg) saturate(1.08);
+    transform: translate(-18px, 14px);
+  }
+}
+
+@keyframes ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -451,7 +525,7 @@ h3 {
 .page-hero {
   padding: calc(var(--header-h) + 3.5rem) 0 var(--space-xl);
   background:
-    radial-gradient(ellipse 60% 50% at 90% 0%, rgba(47, 111, 106, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 90% 0%, rgba(42, 122, 110, 0.14), transparent 55%),
     var(--paper);
 }
 
@@ -847,6 +921,11 @@ h3 {
   .hero-text,
   .hero-actions {
     opacity: 1;
+    animation: none;
+  }
+
+  .hero-orb,
+  .hero-ring {
     animation: none;
   }
 }
