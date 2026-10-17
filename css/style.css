@@ -18,9 +18,9 @@
   --ice: #d5ecef;
   --sky: #a8d4dc;
 
-  /* Titres marqués + corps aérien */
-  --font-display: "Sora", system-ui, sans-serif;
-  --font-body: "Outfit", system-ui, sans-serif;
+  /* Géométrique type wordmark (caps + contraste de graisse) */
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
 
   /* Espacements */
   --space-xs: 0.5rem;
@@ -103,43 +103,53 @@ button {
   border: 0;
 }
 
-/* ---------- Typographie ---------- */
+/* ---------- Typographie (inspirée wordmark Garceaux) ---------- */
 .brand {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.brand-lite {
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--ink);
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
 
 h1 {
-  font-size: clamp(2.55rem, 6vw, 4.15rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.85rem);
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: clamp(1.95rem, 3.8vw, 2.9rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.7rem);
 }
 
 h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .lede {
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  font-weight: 300;
+  font-size: clamp(1.02rem, 1.7vw, 1.15rem);
+  font-weight: 400;
   color: var(--muted);
   max-width: 34rem;
   line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 /* ---------- Boutons ---------- */
@@ -233,10 +243,11 @@ h3 {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-style: normal;
-  font-weight: 600;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   position: relative;
   z-index: 110;
   color: var(--ink);
@@ -509,17 +520,32 @@ h3 {
 }
 
 .hero-brand {
-  font-size: clamp(2.35rem, 6vw, 3.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55rem 0.75rem;
+  font-size: clamp(1.85rem, 5vw, 2.85rem);
   font-weight: 700;
-  margin-bottom: 0.85rem;
-  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--ink);
   opacity: 0;
   animation: rise-bounce 0.95s var(--ease-bounce) 0.05s forwards;
 }
 
+.hero-brand .brand-lite {
+  font-size: 0.42em;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: var(--muted);
+  transform: translateY(-0.15em);
+}
+
 .hero-title {
-  max-width: 14ch;
+  max-width: 16ch;
   font-weight: 700;
+  letter-spacing: -0.035em;
   margin-bottom: var(--space-md);
   opacity: 0;
   animation: rise-bounce 0.95s var(--ease-bounce) 0.14s forwards;
@@ -602,9 +628,9 @@ h3 {
 
 .section-label {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: var(--space-sm);
@@ -759,9 +785,20 @@ h3 {
 }
 
 .footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.65rem;
   color: #fff;
-  font-size: 1.75rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
   margin-bottom: var(--space-sm);
+}
+
+.footer-brand .brand-lite {
+  font-size: 0.48em;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-grid h3 {
